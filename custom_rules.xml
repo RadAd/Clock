@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="rad_rules" default="debug">
+    <property name="out.intermediate.dir" value="${java.io.tmpdir}/${ant.project.name}" />
+    <property name="out.classes.absolute.dir" value="${out.intermediate.dir}/classes" />
+    <property name="out.res.absolute.dir" value="${out.intermediate.dir}/res" />
+    <property name="out.aidl.absolute.dir" value="${out.intermediate.dir}/aidl" />
+    <property name="out.dexed.absolute.dir" value="${out.intermediate.dir}/dexedLibs" />
+
+    <target name="clean" depends="android_rules.clean" >
+        <delete dir="${out.intermediate.dir}" verbose="${verbose}" />
+    </target>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="au.radsoft.clock"
+      android:versionCode="2"
+      android:versionName="2">
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
+    <application
+        android:label="@string/app_name"
+        android:description="@string/app_desc"
+        android:icon="@drawable/clock">
+        <receiver android:name="ClockWidget"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/clock_widget" />
+        </receiver>
+    </application>
+    <supports-screens android:anyDensity="true" />
+</manifest> 
